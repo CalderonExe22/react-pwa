@@ -1,0 +1,41 @@
+
+header
+{
+    background-color: #a22365;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.lupa
+{
+    font-size: 30px;
+}
+
+.sidebar
+{
+    background: #a22365;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkStyle
+{
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10%;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.linkStyle:hover
+{
+    color: #a22365;
+    background-color: #fff;
+    transition: 300ms;
+}

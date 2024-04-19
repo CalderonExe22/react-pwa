@@ -1,0 +1,22 @@
+/*HOME STYLE*/
+
+.MainContent 
+{
+    position: relative;
+    margin-left: 0px; /* Ajusta este valor según el ancho de tu sidebar */  
+    transition: margin-left 0.3s ease; /* Agrega una transición suave */
+}
+  
+.MainContent.open
+{
+    margin-left: 250px;
+}
+
+.sidebarContainer 
+{
+    position: relative; /* Posiciona el contenedor del sidebar en relación con el contenido */
+    top: 0; /* Lo coloca en la parte superior del contenedor de contenido */
+    left: 0; /* Lo coloca en el borde izquierdo del contenedor de contenido */
+    width: 250px; /* Ancho del sidebar */
+    height: 100%;
+}
