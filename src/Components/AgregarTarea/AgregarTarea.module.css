@@ -1,7 +1,12 @@
 
 
-#container
+.container
 {       
     gap: 50px;
     color: #743455;
+}
+
+.container h1,h4
+{
+    font-weight: 600;
 }

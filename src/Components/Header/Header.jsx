@@ -1,5 +1,4 @@
 
-import { Link } from 'react-router-dom';
 import style from "./Header.module.css";
 import Search from '../../Components/Search/Search';
 
@@ -7,13 +6,13 @@ const Header = ({navigatorNab}) =>{
 
     // Se crea una variable constante llamada rutas, las cual es una collecion que contiene objetos en donde se especifican el 
     //nombre de la ruta y su respectivo href
-    const rutas = [{
+    /*const rutas = [{
         name : "Search",
         href : "/Search"
     },{
         name : "Contactos",
         href : "/contact"
-    }];
+    }];*/
 
     return ( 
         
@@ -30,9 +29,9 @@ const Header = ({navigatorNab}) =>{
             <nav className={style.containerLinks} class="col-4 d-flex justify-content-evenly">    
                 {   
                     //se utiliza la funcion map de js para recorrer la coleccion de rutas anteriormente especificada 
-                    rutas.map(index => (
+                    /*rutas.map(index => (
                         <Link className={style.linkStyle} to = {index.href} > {index.name}</Link>
-                    ))
+                    ))*/
                 }
             </nav>
         </header>

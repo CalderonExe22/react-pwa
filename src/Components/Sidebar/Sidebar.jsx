@@ -17,11 +17,14 @@ const Sidebar = ({estado}) => {
 
   const rutas = [{
     name : <span><i class="fa-solid fa-house me-2"></i>Inicio</span>,
-    href : "/"
+    href : "/",
   },{
     name : <span><i class="fa-solid fa-list me-2"></i>Listar tareas</span>,
     href : "/ListarTareas"
-}];
+  },{
+    name : <span><i class="fa-solid fa-pen-to-square me-2"></i>Tablero</span>,
+    href : "/Estados"
+  }];
 
   console.log(getclaseSidebar())
 

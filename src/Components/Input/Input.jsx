@@ -2,10 +2,10 @@
 
 import style from "./Input.module.css"
 
-const Input = ({value,onChange,type}) =>{
+const Input = ({value,onChange,onKeyPress,type,placeholder}) =>{
     
     return (
-        <input className={style.input} type={type} value={value} onChange={onChange} />
+        <input placeholder={placeholder} onKeyDown={onKeyPress} className={style.input} type={type} value={value} onChange={onChange} />
     )
 }
 

@@ -1,0 +1,25 @@
+
+.tarjeta
+{
+    color: #454545;
+    width: 250px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    transition: 0.3s ;
+    text-align: start;
+}
+
+.tarjeta:hover
+{
+    transform: scale(1.1);
+}
+
+.tarjeta h3
+{
+    font-weight: bold;
+}
+
+.tarjeta p
+{
+    font-size: 17px;
+}

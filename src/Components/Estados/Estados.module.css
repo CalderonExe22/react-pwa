@@ -1,0 +1,49 @@
+.container1,.container2,.container3
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    color: #454545;
+    padding: 70px;
+    width: 450px;
+    border-radius: 20px;
+    
+}
+
+.container1 h2,.container2 h2,.container3 h2
+{
+    font-weight: bold;
+}
+
+.container1
+{
+    border-top: 7px solid blue;
+}
+
+.container1 h3
+{
+    color: blue;
+}
+
+.container2
+{
+    border-top: 7px solid rgb(255, 128, 0);
+}
+
+.container2 h3
+{
+    color: rgb(255, 128, 0);
+}
+
+.container3
+{
+    border-top: 7px solid green;
+}
+
+.container3 h3
+{
+    color: green;
+}

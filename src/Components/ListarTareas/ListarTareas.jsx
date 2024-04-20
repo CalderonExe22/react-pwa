@@ -1,16 +1,48 @@
+import Button from "../Button/Button";
+import style from "./ListarTareas.module.css"
 
+const ListarTareas = ({tareas,setTareas}) =>{
 
-const ListarTareas = ({tareas}) =>{
+    document.title = "Listar"
+
+    const handleDeleteTask = (taskId) => {
+        const updatedTasks = tareas.filter(tareas => tareas.id !== taskId);
+        setTareas(updatedTasks);
+    };
 
     return (
 
-        <div className="p-5">
-            <h2>Listado de Tareas</h2>
-            <ul>
-                {tareas.map((tarea) => (
-                    <li>{tarea.description}</li>
-                ))}
-            </ul>
+        <div className="p-5 d-flex flex-column gap-1">
+            
+            <h1>Lista de tareas</h1>
+            <div className={style.fila + " row p-2"}>
+                <div className="col-3 text-center">
+                    <h4>Titulo</h4>
+                </div>
+                <div className="col-3 text-center">
+                    <h4>Descripcion</h4>
+                </div>
+                <div className="col-3 text-center">
+                    <h4>Estado</h4>
+                </div>
+            </div>
+            {tareas.map((tarea) => (
+                <div key={tarea.id} className={style.fila + " row p-2"}>
+                    <div className="col-3 text-center">
+                        <span>{tarea.titulo}</span>
+                    </div>
+                    <div className="col-3 text-center">
+                        <span>{tarea.description}</span>
+                    </div>
+                    <div className="col-3 text-center">
+                        <span>{tarea.completed}</span>
+                    </div>
+                    <div className="col-3 text-center">
+                        <Button onClick={()=>handleDeleteTask(tarea.id)} content={"Eliminar tarea"}></Button>
+                    </div>
+                </div>
+            ))}
+           
         </div>
     );
 }

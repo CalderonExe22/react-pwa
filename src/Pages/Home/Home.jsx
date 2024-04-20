@@ -6,6 +6,7 @@ import style from "./Home.module.css"
 import AgregarTarea from '../../Components/AgregarTarea/AgregarTarea';
 import ListarTareas from '../../Components/ListarTareas/ListarTareas';
 import Index from '../Index/Index';
+import Estados from '../../Components/Estados/Estados';
 
 const Home = () =>{
 
@@ -41,7 +42,8 @@ const Home = () =>{
                 <div className={getClassMainContent()}>
                     <Routes>
                         <Route path="/" element={<Index task={tasks}/>} />
-                        <Route path='/ListarTareas' element={<ListarTareas tareas={tasks}/>}/>
+                        <Route path='/ListarTareas' element={<ListarTareas setTareas={setTasks} tareas={tasks}/>}/>
+                        <Route path="/Estados" element={<Estados tasks={tasks} setTasks={setTasks}/>} />
                     </Routes>
                 </div>
                 <AgregarTarea setTareas={setTasks} tareas={tasks}/>
