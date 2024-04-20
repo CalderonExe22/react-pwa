@@ -24,11 +24,10 @@ const Home = () =>{
         return clase
     }
 
-    const [tareas,setTareas] = useState([])
+    const [tasks, setTasks] = useState([]);
 
-    console.log((tareas))
+    console.log((tasks))
 
-    
     return (
         
             <Router>
@@ -41,11 +40,11 @@ const Home = () =>{
 
                 <div className={getClassMainContent()}>
                     <Routes>
-                        <Route path="/" element={<Index />} />
-                        <Route path='/AgregarTarea' element={<AgregarTarea setTareas={setTareas} tareas={tareas}/>}/>
-                        <Route path='/ListarTareas' element={<ListarTareas tareas={tareas}/>}/>
+                        <Route path="/" element={<Index task={tasks}/>} />
+                        <Route path='/ListarTareas' element={<ListarTareas tareas={tasks}/>}/>
                     </Routes>
                 </div>
+                <AgregarTarea setTareas={setTasks} tareas={tasks}/>
 
             </Router>
 

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
+import TaskCounter from "../../Components/TaskCounter/TaskCounter";
 
-
-const Index = () =>{
+const Index = ({task}) =>{
 
     useEffect(() => {
         document.title = "Inicio"
@@ -9,12 +9,10 @@ const Index = () =>{
 
     return (
 
-        <div className="row d-flex text-center p-5">
-
-            <div className="">
-                <h1>Bienvenido</h1>
-            </div>
-            
+        <div className="row d-flex justify-content-center text-center gap-5 p-5">
+            <h1>Bienvenido de nuevo!</h1>
+            <TaskCounter tasks={task}></TaskCounter>
+                
         </div>
     );
 }

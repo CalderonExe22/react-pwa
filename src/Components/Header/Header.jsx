@@ -18,7 +18,7 @@ const Header = ({navigatorNab}) =>{
     return ( 
         
         <header className="row p-3 m-0">
-            <nav class="col-4 d-flex justify-content-left align-items-center">
+            <nav class="col-4 d-flex justify-c ontent-left align-items-center">
                 <button className={style.sidebar} onClick={navigatorNab}><i class="fa-solid fa-bars"></i></button>
                 <h2 className='ms-4'>To-do lists</h2>
             </nav>
