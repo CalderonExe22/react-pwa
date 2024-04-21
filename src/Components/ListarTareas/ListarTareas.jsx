@@ -1,5 +1,6 @@
 import Button from "../Button/Button";
 import style from "./ListarTareas.module.css"
+import Titulo from '../Titulo/Titulo'
 
 const ListarTareas = ({tareas,setTareas,tareaSeleccionada,setTareaSeleccionada}) =>{
 
@@ -15,7 +16,7 @@ const ListarTareas = ({tareas,setTareas,tareaSeleccionada,setTareaSeleccionada})
 
         <div className="p-5 d-flex flex-column gap-1">
             
-            <h1>Lista de tareas</h1>
+            <Titulo titulo="Lista de tareas" />
             <div className={style.fila + " row p-2"}>
                 <div className="col-3 text-center">
                     <h4>Titulo</h4>
@@ -39,11 +40,10 @@ const ListarTareas = ({tareas,setTareas,tareaSeleccionada,setTareaSeleccionada})
                         <span>{tarea.completed}</span>
                     </div>
                     <div className="col-3 text-center">
-                        <Button onClick={()=>handleDeleteTask(tarea.id)} content={"Eliminar tarea"}></Button>
+                        <Button onClick={()=>handleDeleteTask(tarea.id)} content={"Eliminar tarea"} />
                     </div>
                 </div>
             ))}
-           
         </div>
     );
 }

@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import TaskCounter from "../../Components/TaskCounter/TaskCounter";
+import Titulo from "../../Components/Titulo/Titulo"
 
 const Index = ({task}) =>{
 
@@ -8,9 +9,8 @@ const Index = ({task}) =>{
     },[])
 
     return (
-
         <div className="row d-flex justify-content-center text-center gap-5 p-5">
-            <h1>Bienvenido de nuevo!</h1>
+            <Titulo titulo="Bienvenido de nuevo!" />
             <TaskCounter tasks={task}></TaskCounter>
                 
         </div>
