@@ -27,13 +27,16 @@ const Home = () =>{
 
     const [tasks, setTasks] = useState([]);
 
+    const [taskSelect, setTaskSelect] = useState([]);
+
     console.log((tasks))
+    
 
     return (
         
             <Router>
 
-                <Header navigatorNab={navigatorNab}/>
+                <Header setTareas={setTaskSelect} tareas={tasks} navigatorNab={navigatorNab}/>
 
                 <div className={style.sidebarContainer}>
                     <Sidebar estado={openBar}></Sidebar>
@@ -42,7 +45,7 @@ const Home = () =>{
                 <div className={getClassMainContent()}>
                     <Routes>
                         <Route path="/" element={<Index task={tasks}/>} />
-                        <Route path='/ListarTareas' element={<ListarTareas setTareas={setTasks} tareas={tasks}/>}/>
+                        <Route path='/ListarTareas' element={<ListarTareas setTareaSeleccionada={setTaskSelect} tareaSeleccionada={taskSelect} setTareas={setTasks} tareas={tasks}/>}/>
                         <Route path="/Estados" element={<Estados tasks={tasks} setTasks={setTasks}/>} />
                     </Routes>
                 </div>

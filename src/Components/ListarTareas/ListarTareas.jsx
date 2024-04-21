@@ -1,9 +1,10 @@
 import Button from "../Button/Button";
 import style from "./ListarTareas.module.css"
 
-const ListarTareas = ({tareas,setTareas}) =>{
+const ListarTareas = ({tareas,setTareas,tareaSeleccionada,setTareaSeleccionada}) =>{
 
     document.title = "Listar"
+    
 
     const handleDeleteTask = (taskId) => {
         const updatedTasks = tareas.filter(tareas => tareas.id !== taskId);
@@ -27,7 +28,7 @@ const ListarTareas = ({tareas,setTareas}) =>{
                 </div>
             </div>
             {tareas.map((tarea) => (
-                <div key={tarea.id} className={style.fila + " row p-2"}>
+                <div key={tarea.id} className={tarea === tareaSeleccionada ? style.tareaResaltada + " row p-2"  : style.fila + " row p-2"  }>
                     <div className="col-3 text-center">
                         <span>{tarea.titulo}</span>
                     </div>
