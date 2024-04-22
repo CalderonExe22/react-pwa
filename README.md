@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# PWA_REACT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Proyecto To-Do List
 
-## Available Scripts
+### Descripción:
+Esta aplicación de lista de tareas fue desarrollada como parte de un trabajo práctico para la asignatura de Programación Web Avanzada en la Universidad Nacional del Comahue. 
+La aplicación permite a los usuarios agregar tareas, modificar el estado de las mismas y eliminarlas.
 
-In the project directory, you can run:
+## Desarrolladores:
+* Exequiel Calderon FAI-4432
+* Jonathan Alveal FAI-3581
 
-### `npm start`
+## Guia de Instalación:
+### Requisitos Previos:
+Asegúrate de tener instalado Git y Node.js. Puedes ejecutar los siguientes comandos en tu terminal:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Para verificar la versión de Node.js (Usaremos la versión 10 o superior):
+``` bash
+node -v
+```
+* Para verificar la versión de Git:
+``` bash
+git --version
+```
+Si no tienes instalado alguno de estos requisitos, puedes descargarlos e instalarlos desde los siguientes enlaces:
+* [Descargar Node.js](https://nodejs.org/en/download)
+* [Descargar Git](https://git-scm.com/downloads)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Instalación del Proyecto
 
-### `npm test`
+1. Clona este repositorio. Abre tu terminal en la carpeta deseada y ejecuta el siguiente comando:
+``` bash
+git clone https://github.com/CalderonExe22/react-pwa.git
+```
+2. Accede al directorio del proyecto ejecutando el siguiente comando:
+``` bash
+cd react-pwa
+```
+3. Instala las dependencias del proyecto ejecutando el siguiente comando:
+``` bash
+npm install
+```
+4. Una vez completada la instalación de las dependencias, puedes iniciar el proyecto ejecutando:
+``` bash
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Función de Archivos Iniciales:
+### index.js:
 
-### `npm run build`
+El archivo "index.js" es el primer punto de contacto de una aplicación React, un marco de trabajo popular para la construcción de interfaces web interactivas. Su función principal es llevar a cabo el proceso de mostrar el componente principal de la aplicación dentro del navegador. Generalmente, este componente principal es conocido como <App />, aunque su identificación puede variar dependiendo de la configuración específica del proyecto. En términos simples, "index.js" inicia la aplicación React y asegura que se integre sin problemas con la estructura HTML proporcionada por el navegador.
+### index.css:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El archivo "index.css" en un proyecto de React cumple un papel fundamental en la definición y aplicación de estilos para la interfaz de usuario de la aplicación. Se encarga de establecer reglas de estilo globales que afectan a toda la aplicación, como configuraciones de fuentes, márgenes, espaciados y colores de fondo. Además, puede contener reglas para normalizar estilos entre diferentes navegadores, asegurando una apariencia coherente en diversas plataformas y dispositivos. Este archivo también puede incluir estilos específicos para el componente principal de la aplicación, como el componente "App.js", así como importar otros archivos CSS que contienen estilos adicionales para componentes individuales o módulos de la aplicación.
+### App.js:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El archivo "App.js" en un proyecto de React es el componente principal que organiza la estructura y la lógica de la interfaz de usuario de la aplicación. Actúa como el punto central donde se definen y se organizan otros componentes para construir la aplicación. Además de ser responsable del renderizado de componentes hijos, "App.js" puede gestionar el enrutamiento, el estado global y los eventos que afectan a toda la aplicación.
+### package.json:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El archivo "package.json" es un archivo de configuración esencial en un proyecto de React que se utiliza para gestionar las dependencias, scripts y metadatos del proyecto. Funciona como un punto central de control, especificando las dependencias necesarias para la aplicación, incluidas sus versiones exactas o rangos permitidos. Además, permite definir scripts personalizados que automatizan tareas comunes de desarrollo, como la ejecución del servidor de desarrollo o la construcción de la aplicación para producción. Este archivo también contiene metadatos del proyecto, como el nombre, la descripción, el autor y la versión, proporcionando información importante sobre el proyecto.
