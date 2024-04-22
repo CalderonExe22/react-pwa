@@ -9,7 +9,7 @@ const Index = ({task}) =>{
     },[])
 
     return (
-        <div className="row d-flex justify-content-center text-center gap-5 p-5">
+        <div className="row d-flex justify-content-center text-center gap-5 p-5 m-0">
             <Titulo titulo="Bienvenido de nuevo!" />
             <TaskCounter tasks={task}></TaskCounter>
                 

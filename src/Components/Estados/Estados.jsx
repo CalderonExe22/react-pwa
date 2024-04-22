@@ -18,7 +18,7 @@ const Estados = ({tasks,setTasks}) =>{
     }
 
     return (
-        <div className="row d-flex justify-content-center gap-5 p-5">
+        <div className="row d-flex justify-content-center gap-5 p-5 m-0">
             <div className={style.container1 + " col-4"} onDragOver={handleDragOver} onDrop={(e)=>handleDrop(e,"sin valor")}>
                 <h2>Tareas Totales</h2>
                 {
