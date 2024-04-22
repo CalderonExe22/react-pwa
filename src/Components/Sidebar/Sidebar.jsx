@@ -3,10 +3,13 @@ import React from 'react';
 import style from "./Sidebar.module.css"
 import { Link } from 'react-router-dom';
 
+//parametro estado = booleano
 const Sidebar = ({estado}) => {
 
-  console.log(estado)
+  //console.log(estado)
 
+  //funcion la cual determina la clase del componente sidebar, segun el parametro 
+  //estado, nos permitira ocultar y visualizar el sidebar de la pagina
   const getclaseSidebar = () =>{
     let clases = style.sidebar
     if(estado){
@@ -15,6 +18,7 @@ const Sidebar = ({estado}) => {
     return clases
   }
 
+  //coleccion de rutas
   const rutas = [{
     id:1,
     name : <span><i className="fa-solid fa-house me-2"></i>Inicio</span>,
