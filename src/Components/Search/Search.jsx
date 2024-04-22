@@ -11,7 +11,7 @@ const Search = ({ tareas, setTareaSeleccionada}) => {
     const location = useLocation();
     
     console.log("Ruta actual:", location.pathname.toLowerCase())
-
+    
     useEffect (()=>{
         if(location.pathname.toLowerCase() !== "/listartareas"){
         setTareaSeleccionada(null)

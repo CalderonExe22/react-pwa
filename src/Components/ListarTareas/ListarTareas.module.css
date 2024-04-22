@@ -22,6 +22,11 @@
   }
   
   .tareaResaltada {
-    background-color: #454545;
     animation: cambioTamaño 2s ease; /* Duración de la animación y tipo de curva de velocidad */
+  }
+
+  img
+  {
+    width: 550px;
+    height: 550px;
   }
