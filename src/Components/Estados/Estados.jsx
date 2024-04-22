@@ -23,7 +23,7 @@ const Estados = ({tasks,setTasks}) =>{
                 <h2>Tareas Totales</h2>
                 {
                     tasks.map(task => task.completed === "sin valor" && (
-                        <TarjetaTask key={task.id} titulo={task.titulo} descripcion={task.description} draggable={"true"} onDragStart={(e)=>handleDragStart(e,task.id)} ></TarjetaTask>
+                        <TarjetaTask key={task.id} id={task.id} titulo={task.titulo} descripcion={task.description} draggable={"true"} onDragStart={(e)=>handleDragStart(e,task.id)} ></TarjetaTask>
                     ))
                 }
             </div>
@@ -31,14 +31,14 @@ const Estados = ({tasks,setTasks}) =>{
                 <h2>Tareas pendientes</h2>
                 {
                     tasks.map(task => task.completed === "pendiente" && (
-                        <TarjetaTask key={task.id} titulo={task.titulo} descripcion={task.description} draggable={"true"} onDragStart={(e)=>handleDragStart(e,task.id)} ></TarjetaTask>
+                        <TarjetaTask key={task.id} id={task.id} titulo={task.titulo} descripcion={task.description} draggable={"true"} onDragStart={(e)=>handleDragStart(e,task.id)} ></TarjetaTask>
                     ))
                 }
             </div>
             <div className={style.container3 + " col-4"} onDragOver={handleDragOver} onDrop={(e) => handleDrop(e, "completada")}>
                 <h2>Tareas completadas</h2>
                 {tasks.map(task => task.completed === "completada" && (
-                    <TarjetaTask key={task.id} titulo={task.titulo} descripcion={task.description} draggable={"true"} onDragStart={(e)=>handleDragStart(e,task.id)}/>
+                    <TarjetaTask key={task.id} id={task.id} titulo={task.titulo} descripcion={task.description} draggable={"true"} onDragStart={(e)=>handleDragStart(e,task.id)}/>
                 ))}
             </div>
             

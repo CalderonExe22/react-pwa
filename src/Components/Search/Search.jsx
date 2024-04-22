@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import style from "./Search.module.css";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -12,9 +12,12 @@ const Search = ({ tareas, setTareaSeleccionada}) => {
     
     console.log("Ruta actual:", location.pathname.toLowerCase())
 
-    if(location.pathname.toLowerCase() !== "/listartareas"){
+    useEffect (()=>{
+        if(location.pathname.toLowerCase() !== "/listartareas"){
         setTareaSeleccionada(null)
     }
+    },[location.pathname,setTareaSeleccionada])
+    
     
     const verTarea = (tarea) =>{
         setTareaSeleccionada(tarea)

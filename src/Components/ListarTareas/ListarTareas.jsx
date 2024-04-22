@@ -2,7 +2,7 @@ import Button from "../Button/Button";
 import style from "./ListarTareas.module.css"
 import Titulo from '../Titulo/Titulo'
 
-const ListarTareas = ({tareas,setTareas,tareaSeleccionada,setTareaSeleccionada}) =>{
+const ListarTareas = ({tareas,setTareas,tareaSeleccionada}) =>{
 
     document.title = "Listar"
     
