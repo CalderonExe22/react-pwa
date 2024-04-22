@@ -30,7 +30,7 @@ const Search = ({ tareas, setTareaSeleccionada}) => {
         const valueBusqueda = event.target.value;
         setBusqueda(valueBusqueda);
         const tareasFiltradas = tareas.filter(tarea =>
-            tarea.description.toLowerCase().includes(valueBusqueda.toLowerCase())
+            tarea.titulo.toLowerCase().includes(valueBusqueda.toLowerCase())
         );
         setFiltrarBusqueda(tareasFiltradas)
     };
@@ -52,9 +52,10 @@ const Search = ({ tareas, setTareaSeleccionada}) => {
         <div className={style.filtro}>
             <div className={mostrarFiltro()}>
                 <ul>
+                    <li className="mt-4"><h5><strong>tareas...</strong></h5></li>
                 {
                     filtrarBusqueda.map(tarea =>(
-                        <li key={tarea.id} onClick={()=> verTarea(tarea)}>{tarea.description}</li>
+                        <li className={style.liResults} key={tarea.id} onClick={()=> verTarea(tarea)}>{tarea.titulo}</li>
                     ))
                 }
             </ul>

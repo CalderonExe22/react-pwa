@@ -8,8 +8,20 @@
 
 }
 
-.tareaResaltada 
-{
 
-    background-color:  #454545;
-}
+@keyframes cambioTamaño {
+    0% {
+      transform: scale(1); /* Tamaño original */
+    }
+    50% {
+      transform: scale(1.04); /* Tamaño aumentado */
+    }
+    100% {
+      transform: scale(1); /* Tamaño original */
+    }
+  }
+  
+  .tareaResaltada {
+    background-color: #454545;
+    animation: cambioTamaño 2s ease; /* Duración de la animación y tipo de curva de velocidad */
+  }

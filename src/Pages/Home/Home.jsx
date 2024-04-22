@@ -30,6 +30,7 @@ const Home = () =>{
     const [taskSelect, setTaskSelect] = useState([]);
 
     console.log((tasks))
+    console.log(taskSelect)
     
 
     return (

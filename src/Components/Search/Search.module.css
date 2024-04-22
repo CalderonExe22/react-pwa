@@ -4,9 +4,15 @@
     width: 450px;
     height: 35px;
     border: 1px solid white;
-    color: #a22365;
-    font-size: 20px;
+    color: #454545;
+    font-size: 21px;
+    border-radius: 10px;
+    z-index: 11;
+    outline: none;
+    padding-left: 28px;
 }
+
+
 
 .filtro
 {
@@ -16,11 +22,29 @@
 .results
 {
     position: absolute;
-    top: 0;
+    top: -15px;
+    left: 0;
     list-style-type: none;
     width: 100%;
     background-color: #fff;
-    color: #a22365;
+    color: #454545;
+    z-index: 10;
+    border-radius: 10px 10px;
+}
+
+.liResults
+{
+    margin-top: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 250ms;
+    box-sizing: border-box;
+}
+
+.liResults:hover
+{
+    border-left:10px solid #a22365 ;
+    transition: 200ms;
 }
 
 .resultsNone

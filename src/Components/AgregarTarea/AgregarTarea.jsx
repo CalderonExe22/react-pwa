@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "./AgregarTarea.module.css"
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 
 const AgregarTarea = ({tareas,setTareas}) =>{
 
-    useEffect(() => {
-        document.title = "Agregar Tarea"
-    },[])
+    
+    document.title = "Agregar Tarea"
 
     const [inputValueDescripcion, setInputValueDescripcion] = useState("")
     const [inputValueTitulo, setInputValueTitulo] = useState("")
@@ -74,6 +73,7 @@ const AgregarTarea = ({tareas,setTareas}) =>{
                 </div>
             </div>
         </div>
+        
     );
 }
 
