@@ -61,6 +61,10 @@ El archivo "package.json" es un archivo de configuración esencial en un proyect
 
 ## Documentación Relevante
 
+### Función `handleDeleteTask` que se encuentra en el Archivo `ListarTareas.jsx`:
+![handleDeleteTask](https://github.com/CalderonExe22/react-pwa/assets/94760108/12de5dc6-e5e3-449d-b521-07bf643e4b67)
+Función que elimina una tarea en especifico, llamada en el evento `onclick` de los botones eliminar. Se utiliza el método `filter()` para crear un nuevo arreglo de tareas que excluye la tarea con el id especificado `(taskId)`. Este método recorre todas las tareas en la lista y solo mantiene aquellas cuyo id sea diferente al `taskId` proporcionado. Se setan las tareas filtradas y se setean las tareas atraves del set que ingresa por parametros.
+
 ### Función `handleDragStart` que se encuentra en el Archivo `Estados.jsx`:
 ![handleDragStart](https://github.com/CalderonExe22/react-pwa/assets/94760108/3a9a162e-8933-4eba-a4d0-c487c14a1129)
 Esta función se activa cuando comienza un evento de arrastre `(dragstart)` en un elemento que tiene la propiedad `draggable` establecida en `true`, como las tarjetas de tarea TarjetasTask el método `setData()` del objeto `dataTransfer` del evento para establecer datos que serán transferidos durante el evento de arrastre. En este caso, estamos configurando un dato con la clave `taskId` y el valor `taskId`, que es el identificador único de la tarea que se está arrastrando de forma predeterminada.
