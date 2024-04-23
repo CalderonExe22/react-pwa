@@ -10,13 +10,22 @@ import Estados from '../../Components/Estados/Estados';
 
 const Home = () =>{
 
+    //useState de estado del sidebar
     const [openBar,setOpenBar] = useState(false)
 
+    //Esta función se pasa como prop al Header y se 
+    //ejecuta cuando se hace clic en el botón de navegación. 
+    //Invierte el valor del estado openBar usando 
+    //setOpenBar y devuelve el nuevo valor.
     const navigatorNab = () =>{
         setOpenBar(!openBar)
         return openBar
     }
 
+    //Esta funcion se encarga de calcular dinámicamente las clases CSS que se
+    //aplicarán al contenedor del contenido principal. Estas clases 
+    //determinan la apariencia y el diseño del contenido principal, 
+    //especialmente en relación con el sidebar.
     const getClassMainContent = (navigatorNab) =>{
         let clase = style.MainContent
         if(openBar){
@@ -25,8 +34,9 @@ const Home = () =>{
         return clase
     }
 
+    //useState de las tareas 
     const [tasks, setTasks] = useState([]);
-
+    //useState de las tareas seleccionada en el componente search
     const [taskSelect, setTaskSelect] = useState([]);
 
     console.log((tasks))
