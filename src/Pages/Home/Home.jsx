@@ -45,22 +45,23 @@ const Home = () =>{
 
     return (
         
-            <Router>
+            <Router>{/* Envuelve toda la aplicación con el componente Router */}
 
-                <Header setTareas={setTaskSelect} tareas={tasks} navigatorNab={navigatorNab}/>
+                <Header setTareas={setTaskSelect} tareas={tasks} navigatorNab={navigatorNab}/> {/* Componente Header */}
 
                 <div className={style.sidebarContainer}>
-                    <Sidebar estado={openBar}></Sidebar>
+                    <Sidebar estado={openBar}></Sidebar>{/* Componente Sidebar */}
                 </div>
 
                 <div className={getClassMainContent()}>
-                    <Routes>
-                        <Route path="/" element={<Index task={tasks}/>} />
-                        <Route path='/ListarTareas' element={<ListarTareas setTareaSeleccionada={setTaskSelect} tareaSeleccionada={taskSelect} setTareas={setTasks} tareas={tasks}/>}/>
-                        <Route path="/Estados" element={<Estados tasks={tasks} setTasks={setTasks}/>} />
+                    <Routes>{/* Componente que define las rutas de la aplicación. */}
+                        {/* Se definen múltiples <Route> que corresponden a las diferentes URL de la aplicación. */}
+                        <Route path="/" element={<Index task={tasks}/>} />{/* Ruta para la página de inicio */}
+                        <Route path='/ListarTareas' element={<ListarTareas setTareaSeleccionada={setTaskSelect} tareaSeleccionada={taskSelect} setTareas={setTasks} tareas={tasks}/>}/>{/* Ruta para la página de listar tareas */}
+                        <Route path="/Estados" element={<Estados tasks={tasks} setTasks={setTasks}/>} />{/* Ruta para la página de estados */}
                     </Routes>
                 </div>
-                <AgregarTarea setTareas={setTasks} tareas={tasks}/>
+                <AgregarTarea setTareas={setTasks} tareas={tasks}/> {/* Componente AgregarTarea */}
 
             </Router>
 

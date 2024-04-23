@@ -42,9 +42,10 @@ const Sidebar = ({estado}) => {
         <h2><i className="fa-solid fa-gear m-2"></i>Tools</h2>
     
         {rutas.map(index => (
-          <li key={index.id}><Link className={style.links} to = {index.href} > {index.name}</Link></li>
+          /* <Link> es un componente que se utiliza para crear enlaces, utiliza el atributo "to" en lugar de "href" evitando que la pagina se recargue completamente */
+          <li key={index.id}><Link className={style.links} to = {index.href} > {index.name}</Link></li> /* Crea un enlace para cada ruta */
         ))}
-        <li><Link className={style.links} data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i className="fa-solid fa-arrow-up-from-bracket me-2"></i>Agregar Tarea</Link></li>
+        <li><Link className={style.links} data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i className="fa-solid fa-arrow-up-from-bracket me-2"></i>Agregar Tarea</Link></li>{/* Enlace para agregar tarea */}
         </ul>
     </div>
   );
