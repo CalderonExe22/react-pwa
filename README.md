@@ -40,7 +40,11 @@ cd react-pwa
 ``` bash
 npm install
 ```
-4. Una vez completada la instalación de las dependencias, puedes iniciar el proyecto ejecutando:
+4. Intalar la Libreria "react-router-dom" ejecutando el siguiente comando:
+``` bash
+npm i react-router-dom
+```
+5. Una vez completada la instalación de las dependencias, puedes iniciar el proyecto ejecutando:
 ``` bash
 npm start
 ```
@@ -58,3 +62,21 @@ El archivo "App.js" en un proyecto de React es el componente principal que organ
 ### package.json:
 
 El archivo "package.json" es un archivo de configuración esencial en un proyecto de React que se utiliza para gestionar las dependencias, scripts y metadatos del proyecto. Funciona como un punto central de control, especificando las dependencias necesarias para la aplicación, incluidas sus versiones exactas o rangos permitidos. Además, permite definir scripts personalizados que automatizan tareas comunes de desarrollo, como la ejecución del servidor de desarrollo o la construcción de la aplicación para producción. Este archivo también contiene metadatos del proyecto, como el nombre, la descripción, el autor y la versión, proporcionando información importante sobre el proyecto.
+
+## Documentación Relevante
+
+### Función `handleDeleteTask` que se encuentra en el Archivo `ListarTareas.jsx`:
+![handleDeleteTask](https://github.com/CalderonExe22/react-pwa/assets/94760108/12de5dc6-e5e3-449d-b521-07bf643e4b67)
+Función que elimina una tarea en especifico, llamada en el evento `onclick` de los botones eliminar. Se utiliza el método `filter()` para crear un nuevo arreglo de tareas que excluye la tarea con el id especificado `(taskId)`. Este método recorre todas las tareas en la lista y solo mantiene aquellas cuyo id sea diferente al `taskId` proporcionado. Se setan las tareas filtradas y se setean las tareas atraves del set que ingresa por parametros.
+
+### Función `handleDragStart` que se encuentra en el Archivo `Estados.jsx`:
+![handleDragStart](https://github.com/CalderonExe22/react-pwa/assets/94760108/3a9a162e-8933-4eba-a4d0-c487c14a1129)
+Esta función se activa cuando comienza un evento de arrastre `(dragstart)` en un elemento que tiene la propiedad `draggable` establecida en `true`, como las tarjetas de tarea TarjetasTask el método `setData()` del objeto `dataTransfer` del evento para establecer datos que serán transferidos durante el evento de arrastre. En este caso, estamos configurando un dato con la clave `taskId` y el valor `taskId`, que es el identificador único de la tarea que se está arrastrando de forma predeterminada.
+
+### Función `handleDragOver` que se encuentra en el Archivo `Estados.jsx`:
+![handleDragOver](https://github.com/CalderonExe22/react-pwa/assets/94760108/fc06c162-e294-4a84-a763-1b482f3a9d99)
+Esta función se crea ya que los navegadores no permiten soltar elementos en otras áreas. Por eso llamamos a un `preventDefault` para que el elemento arrastrable se suelte en el área que está escuchando eventos de `dragover`.
+
+### Función `handleDrop` que se encuentra en el Archivo `Estados.jsx`:
+![handleDrop](https://github.com/CalderonExe22/react-pwa/assets/94760108/c6d32fe4-4ad0-44fe-8c48-2b7194872458)
+Esta función se activa cuando se suelta un elemento arrastrable sobre un área del evento drop. Dentro de la función, primero obtenemos el identificador único de la tarea que se está soltando utilizando el método `getData()` del objeto `dataTransfer` del evento. Este identificador se había establecido previamente en la función `handleDragStart`. Luego, actualizamos el estado de las tareas utilizando el método `map()` para recorrer todas las tareas. Si el identificador de la tarea coincide con el `taskId` obtenido del evento de soltar, actualizamos el estado de esa tarea con el estado proporcionado `(completed)`. De lo contrario, dejamos la tarea sin cambios.
