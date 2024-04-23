@@ -40,7 +40,11 @@ cd react-pwa
 ``` bash
 npm install
 ```
-4. Una vez completada la instalación de las dependencias, puedes iniciar el proyecto ejecutando:
+4. Intalar la Libreria "react-router-dom" ejecutando el siguiente comando:
+``` bash
+npm i react-router-dom
+```
+5. Una vez completada la instalación de las dependencias, puedes iniciar el proyecto ejecutando:
 ``` bash
 npm start
 ```
